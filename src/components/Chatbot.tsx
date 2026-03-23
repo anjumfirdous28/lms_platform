@@ -159,7 +159,7 @@ export default function Chatbot({ courses }: { courses: any[] }) {
         onClick={() => setOpen(!open)}
         className="fixed bottom-4 right-4 z-50 w-14 h-14 gradient-primary rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
       >
-        {open ? <X className="w-6 h-6 text-primary-foreground" /> : <MessageCircle className="w-6 h-6 text-primary-foreground" />}
+        {open ? <X className="w-6 h-6 text-primary-foreground" /> : <BotMessageSquare className="w-6 h-6 text-primary-foreground" />}
       </button>
     </>
   );
