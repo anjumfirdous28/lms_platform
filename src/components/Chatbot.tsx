@@ -15,7 +15,7 @@ const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat`;
 export default function Chatbot({ courses }: { courses: any[] }) {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: "Hey there! 👋 I'm **Cortex**, your smart study buddy. Ask me anything about courses, enrollment, or how the platform works!" },
+    { role: 'assistant', content: "Hey there! 👋 I'm **Sahay**, your friendly study companion. Ask me anything about courses, enrollment, or how the platform works!" },
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -116,7 +116,7 @@ export default function Chatbot({ courses }: { courses: any[] }) {
             <div className="p-4 gradient-primary rounded-t-xl flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <GraduationCap className="w-5 h-5 text-primary-foreground" />
-                <span className="font-display font-semibold text-primary-foreground">Cortex AI</span>
+                <span className="font-display font-semibold text-primary-foreground">Sahay</span>
               </div>
               <button onClick={() => setOpen(false)}><X className="w-5 h-5 text-primary-foreground/80" /></button>
             </div>

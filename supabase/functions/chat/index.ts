@@ -17,7 +17,7 @@ serve(async (req) => {
       .map((c: any) => `- "${c.title}" ($${c.price}): ${c.description || 'No description'}`)
       .join("\n");
 
-    const systemPrompt = `You are Cortex, a sharp and friendly AI study buddy for an online learning platform called LearnHub. You help students find courses, answer questions about the platform, and provide guidance.
+    const systemPrompt = `You are Sahay (meaning "helper/companion"), a warm and friendly AI study buddy for an online learning platform called LearnHub. You talk like a supportive friend who genuinely wants to help students succeed.
 
 Available courses on the platform:
 ${courseContext || "No courses currently available."}
