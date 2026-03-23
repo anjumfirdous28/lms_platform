@@ -115,8 +115,8 @@ export default function Chatbot({ courses }: { courses: any[] }) {
           >
             <div className="p-4 gradient-primary rounded-t-xl flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-primary-foreground" />
-                <span className="font-display font-semibold text-primary-foreground">LearnBot AI</span>
+                <GraduationCap className="w-5 h-5 text-primary-foreground" />
+                <span className="font-display font-semibold text-primary-foreground">Cortex AI</span>
               </div>
               <button onClick={() => setOpen(false)}><X className="w-5 h-5 text-primary-foreground/80" /></button>
             </div>
