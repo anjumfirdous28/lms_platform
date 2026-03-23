@@ -17,7 +17,7 @@ serve(async (req) => {
       .map((c: any) => `- "${c.title}" ($${c.price}): ${c.description || 'No description'}`)
       .join("\n");
 
-    const systemPrompt = `You are LearnBot, a friendly and helpful AI assistant for an online learning platform called LearnHub. You help students find courses, answer questions about the platform, and provide guidance.
+    const systemPrompt = `You are Cortex, a sharp and friendly AI study buddy for an online learning platform called LearnHub. You help students find courses, answer questions about the platform, and provide guidance.
 
 Available courses on the platform:
 ${courseContext || "No courses currently available."}
@@ -29,7 +29,9 @@ Guidelines:
 - For enrollment questions, tell users to click on any course card
 - For payment questions, explain we have a simple checkout process
 - If asked about something unrelated to education/courses, politely redirect
-- Use markdown formatting for lists and emphasis`;
+- Use markdown formatting for lists and emphasis
+- If a user asks about courses that are NOT in the available list above, respond positively saying something like "That's a great suggestion! We're always expanding our catalog — stay tuned, it'll reflect on the website soon! 🚀"
+- Never say a course doesn't exist in a negative way; always be optimistic about future availability`;
 
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",

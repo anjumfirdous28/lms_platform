@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Loader2, Sparkles } from 'lucide-react';
+import { X, Send, Loader2, BotMessageSquare, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -15,7 +15,7 @@ const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat`;
 export default function Chatbot({ courses }: { courses: any[] }) {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: "Hi! 👋 I'm **LearnBot**, your AI learning assistant. Ask me anything about our courses, enrollment, or how the platform works!" },
+    { role: 'assistant', content: "Hey there! 👋 I'm **Cortex**, your smart study buddy. Ask me anything about courses, enrollment, or how the platform works!" },
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -115,8 +115,8 @@ export default function Chatbot({ courses }: { courses: any[] }) {
           >
             <div className="p-4 gradient-primary rounded-t-xl flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-primary-foreground" />
-                <span className="font-display font-semibold text-primary-foreground">LearnBot AI</span>
+                <GraduationCap className="w-5 h-5 text-primary-foreground" />
+                <span className="font-display font-semibold text-primary-foreground">Cortex AI</span>
               </div>
               <button onClick={() => setOpen(false)}><X className="w-5 h-5 text-primary-foreground/80" /></button>
             </div>
@@ -159,7 +159,7 @@ export default function Chatbot({ courses }: { courses: any[] }) {
         onClick={() => setOpen(!open)}
         className="fixed bottom-4 right-4 z-50 w-14 h-14 gradient-primary rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
       >
-        {open ? <X className="w-6 h-6 text-primary-foreground" /> : <MessageCircle className="w-6 h-6 text-primary-foreground" />}
+        {open ? <X className="w-6 h-6 text-primary-foreground" /> : <BotMessageSquare className="w-6 h-6 text-primary-foreground" />}
       </button>
     </>
   );
